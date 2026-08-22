@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* =========================================
    VAMPIRE TECH CHALLENGE
    RED THEME
@@ -41,10 +42,43 @@ body {
     padding:
         30px
         15px;
+=======
+:root {
+  --bg-dark: #070709;
+  --card-bg: rgba(18, 16, 22, 0.88);
+  --crimson-glow: #e63946;
+  --blood-red: #8b0000;
+  --text-main: #f1f1f1;
+  --text-sub: #a0a0ab;
+  --border-red: rgba(230, 57, 70, 0.35);
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none; /* Point 26: Disables text selection */
+  -webkit-user-select: none;
+}
 
+body {
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 50% 10%, rgba(139, 0, 0, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(230, 57, 70, 0.08) 0%, transparent 50%);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+>>>>>>> 824af4a0942ddee7b7a396ab0f7241428c5586de
+}
+
+/* Point 32: Responsive Container */
 .container {
+<<<<<<< HEAD
     width: 95%;
 
     max-width: 900px;
@@ -622,4 +656,170 @@ button:disabled {
         font-size: 15px;
     }
 
+=======
+  width: 100%;
+  max-width: 750px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-red);
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.85), 0 0 25px rgba(139, 0, 0, 0.25);
+  padding: 32px;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-red);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: var(--crimson-glow);
+  text-shadow: 0 0 8px rgba(230, 57, 70, 0.4);
+}
+
+.timer-badge {
+  font-family: 'Fira Code', monospace;
+  background: rgba(139, 0, 0, 0.35);
+  border: 1px solid var(--crimson-glow);
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.hidden { display: none !important; }
+
+/* Form Controls */
+input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-red);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 20px;
+}
+input[type="text"]:focus {
+  border-color: var(--crimson-glow);
+  box-shadow: 0 0 8px rgba(230, 57, 70, 0.4);
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--blood-red), var(--crimson-glow));
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+}
+
+/* MCQ Options */
+.code-block {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  color: #38ef7d;
+  margin-bottom: 20px;
+  border-left: 3px solid var(--crimson-glow);
+  white-space: pre-wrap;
+}
+
+.options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 14px 18px;
+  border-radius: 8px;
+  color: var(--text-main);
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.option-btn:hover {
+  border-color: var(--crimson-glow);
+  background: rgba(230, 57, 70, 0.1);
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+/* Point 15: Centered Hint Box / Popup styling */
+.modal-box {
+  background: #121016;
+  border: 1px solid var(--crimson-glow);
+  padding: 28px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(230, 57, 70, 0.35);
+}
+.modal-box h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--crimson-glow);
+  margin-bottom: 12px;
+}
+.modal-box p {
+  color: var(--text-sub);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Point 17: Hints Below Questions */
+.hint-container {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px dashed var(--border-red);
+}
+.hint-toggle {
+  background: none;
+  border: none;
+  color: var(--crimson-glow);
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+.hint-text {
+  margin-top: 10px;
+  padding: 12px;
+  background: rgba(139, 0, 0, 0.2);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #ffcccc;
+>>>>>>> 824af4a0942ddee7b7a396ab0f7241428c5586de
 }
